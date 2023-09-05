@@ -7,7 +7,7 @@ module.exports = {
     await queryInterface.addConstraint('Articles', 
     {fields: ['userId'], type: 'foreign key', 
     name: 'user-article-association',
-    references: {table: 'users', field:'id'}
+    references: {table: 'Users', field:'id'}
   })
   },
 

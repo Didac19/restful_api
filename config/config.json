@@ -1,10 +1,17 @@
 {
-  "development": {
+  "development2": {
     "username": "root",
     "password": null,
     "database": "db_api_rest",
     "host": "127.0.0.1",
     "dialect": "mysql"
+  },
+  "development": {
+    "username": "postgres",
+    "password": "root",
+    "database": "db_api_rest2",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",

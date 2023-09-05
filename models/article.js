@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       models.User.hasMany(Article);
 
       Article.belongsToMany(models.Category, 
-        {through: 'articleCategories', as: 'categories'}
+        {through: 'articleCategories', as: 'Categories'}
         );
 
     }
@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'article',
+    modelName: 'Article',
   },
   {onDelete: 'RESTRICT', onUpdate: 'CASCADE'});
   return Article;
