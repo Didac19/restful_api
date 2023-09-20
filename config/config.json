@@ -21,10 +21,14 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "didac19",
+    "password": "tUwTexKUSIfmPc0EHCdRyT2cCbDIZcMp",
+    "database": "db_api_rest_ssho",
+    "host": "oregon-postgres.render.com",
+    "dialect": "postgres",
+    "dialectOptions":{
+      "require": true,
+      "rejectUnauthorized": false
+    }
   }
 }
