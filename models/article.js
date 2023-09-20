@@ -11,8 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Article.belongsTo(models.User);
-      models.User.hasMany(Article);
-
       Article.belongsToMany(models.Category, 
         {through: 'articleCategories', as: 'Categories'}
         );
@@ -22,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   Article.init({
     title: DataTypes.STRING,
     body: DataTypes.TEXT,
-    userId: DataTypes.INTEGER
+    UserId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Article',

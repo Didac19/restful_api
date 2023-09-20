@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Category.belongsToMany(models.Article,
-        {through: 'articleCategories', as: 'articles'}
+        {through: 'articleCategories', as: 'Articles'}
         );
     }
   }
