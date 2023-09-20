@@ -27,8 +27,11 @@
     "host": "oregon-postgres.render.com",
     "dialect": "postgres",
     "dialectOptions":{
-      "require": true,
-      "rejectUnauthorized": false
+      "ssl":{
+        "require": true,
+        "rejectUnauthorized": false
+      }
+      
     }
   }
 }
