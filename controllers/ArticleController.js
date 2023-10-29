@@ -76,15 +76,21 @@ const update = async (req, res) => {
   }
 };
 const destroy = async (req, res) => {
-  const id = req.params.articleId;
+  try {
+    const id = req.params.articleId;
 
-  const deletedArticle = await articleService.destroy(id);
+    const deletedArticle = await articleService.destroy(id);
 
-  if (deletedArticle) {
-    res
-      .status(200)
-      .send({ status: "OK", message: "article deleted", data: deletedArticle });
-  } else {
+    if (deletedArticle) {
+      res
+        .status(200)
+        .send({
+          status: "OK",
+          message: "article deleted",
+          data: deletedArticle,
+        });
+    }
+  } catch (error) {
     res.status(400).send({ status: "failed", data: { error: error.message } });
   }
 };

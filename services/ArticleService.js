@@ -67,6 +67,7 @@ const update = async (id, title, body) => {
 
 const destroy = async (id) => {
   try {
+    await db.articleCategory.destroy({ where: { ArticleId: id } });
     const deletedArticle = await db.Article.destroy({ where: { id } });
     return deletedArticle;
   } catch (error) {
